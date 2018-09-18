@@ -214,10 +214,10 @@
         <loc>https://webpack.js.org/contribute/writing-a-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/development/how-to-write-a-loader/index.html</loc>
+        <loc>https://webpack.js.org/development/how-to-write-a-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/development/how-to-write-a-plugin/index.html</loc>
+        <loc>https://webpack.js.org/development/how-to-write-a-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/plugin-patterns/index.html</loc>
