@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/27426a0406dc4c2ee424.css" rel="stylesheet">
+      <link href="/44bc87317ab8b1c14d90.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -25,7 +25,7 @@
         <span class="text">General</span>
         <a aria-label="General" class="icon-link" href="#general"></a>
       </h2>
-<p>The following best practices should help whether or not you are in <a href="/guides/development">development</a> or building for <a href="/guides/production">production</a>.</p>
+<p>The following best practices should help, whether you&apos;re running build scripts in <a href="/guides/development">development</a> or <a href="/guides/production">production</a>.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#stay-up-to-date" id="stay-up-to-date"></a>
         <span class="text">Stay Up to Date</span>
@@ -33,7 +33,7 @@
       </h3>
 <p>Use the latest webpack version. We are always making performance improvements. The latest stable version of webpack is:</p>
 <p><a href="https://github.com/webpack/webpack/releases"><img src="https://img.shields.io/npm/v/webpack.svg?label=webpack&amp;style=flat-square&amp;maxAge=3600" alt="latest webpack version"></a></p>
-<p>Staying up to date with <strong>Node.js</strong>  can also help with performance. On top of this, keeping your package manager (e.g. <code>npm</code> or <code>yarn</code>) up to date can also help. Newer versions create more efficient module trees and increase resolving speed.</p>
+<p>Staying up-to-date with <strong>Node.js</strong>  can also help with performance. On top of this, keeping your package manager (e.g. <code>npm</code> or <code>yarn</code>) up-to-date can also help. Newer versions create more efficient module trees and increase resolving speed.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#loaders" id="loaders"></a>
         <span class="text">Loaders</span>
@@ -71,15 +71,15 @@
         <span class="text">Bootstrap</span>
         <a aria-label="Bootstrap" class="icon-link" href="#bootstrap"></a>
       </h3>
-<p>Each additional loader/plugin has a bootup time. Try to use as few different tools as possible.</p>
+<p>Each additional loader/plugin has a bootup time. Try to use as few tools as possible.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#resolving" id="resolving"></a>
         <span class="text">Resolving</span>
         <a aria-label="Resolving" class="icon-link" href="#resolving"></a>
       </h3>
-<p>The following steps can increase the speed of resolving:</p>
+<p>The following steps can increase resolving speed:</p>
 <ul>
-<li>Minimize the number of items in <code>resolve.modules</code>, <code>resolve.extensions</code>, <code>resolve.mainFiles</code>, <code>resolve.descriptionFiles</code> as they increase the number of filesystem calls.</li>
+<li>Minimize the number of items in <code>resolve.modules</code>, <code>resolve.extensions</code>, <code>resolve.mainFiles</code>, <code>resolve.descriptionFiles</code>, as they increase the number of filesystem calls.</li>
 <li>Set <code>resolve.symlinks: false</code> if you don&apos;t use symlinks (e.g. <code>npm link</code> or <code>yarn link</code>).</li>
 <li>Set <code>resolve.cacheWithContext: false</code> if you use custom resolving plugins, that are not context specific.</li>
 </ul>
@@ -108,7 +108,7 @@
         <a aria-label="Worker Pool" class="icon-link" href="#worker-pool"></a>
       </h3>
 <p>The <code>thread-loader</code> can be used to offload expensive loaders to a worker pool.</p>
-<blockquote class="warning"><div class="tip-content"> Don&apos;t use too many workers as there is a boot overhead for the Node.js runtime and the loader. Minimize the module transfers between worker and main process. IPC is expensive. </div></blockquote><h3 class="header">
+<blockquote class="warning"><div class="tip-content"> Don&apos;t use too many workers, as there is a boot overhead for the Node.js runtime and the loader. Minimize the module transfers between worker and main process. IPC is expensive. </div></blockquote><h3 class="header">
         <a class="anchor" aria-hidden="true" href="#persistent-cache" id="persistent-cache"></a>
         <span class="text">Persistent cache</span>
         <a aria-label="Persistent cache" class="icon-link" href="#persistent-cache"></a>
@@ -132,8 +132,8 @@
         <span class="text">Incremental Builds</span>
         <a aria-label="Incremental Builds" class="icon-link" href="#incremental-builds"></a>
       </h3>
-<p>Use webpack&apos;s watch mode. Don&apos;t use other tools to watch your files and invoke webpack. The built in watch mode will keep track of timestamps and passes this information to the compilation for cache invalidation.</p>
-<p>In some setups watching falls back to polling mode. With many watched files this can cause a lot of CPU load. In these cases you can increase the polling interval with <code>watchOptions.poll</code>.</p>
+<p>Use webpack&apos;s watch mode. Don&apos;t use other tools to watch your files and invoke webpack. The built-in watch mode will keep track of timestamps and passes this information to the compilation for cache invalidation.</p>
+<p>In some setups, watching falls back to polling mode. With many watched files, this can cause a lot of CPU load. In these cases, you can increase the polling interval with <code>watchOptions.poll</code>.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#compile-in-memory" id="compile-in-memory"></a>
         <span class="text">Compile in Memory</span>
@@ -162,13 +162,13 @@
 <li>The <code>cheap-source-map</code> variants are more performant, if you can live with the slightly worse mapping quality.</li>
 <li>Use a <code>eval-source-map</code> variant for incremental builds.</li>
 </ul>
-<p>=&gt; In most cases <code>cheap-module-eval-source-map</code> is the best option.</p>
+<p>=&gt; In most cases, <code>cheap-module-eval-source-map</code> is the best option.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#avoid-production-specific-tooling" id="avoid-production-specific-tooling"></a>
         <span class="text">Avoid Production Specific Tooling</span>
         <a aria-label="Avoid Production Specific Tooling" class="icon-link" href="#avoid-production-specific-tooling"></a>
       </h3>
-<p>Certain utilities, plugins and loader only make sense when building for production. For example, it usually doesn&apos;t make sense to minify and mangle your code with the <code>UglifyJsPlugin</code> while in development. These tools should typically be excluded in development:</p>
+<p>Certain utilities, plugins, and loaders only make sense when building for production. For example, it usually doesn&apos;t make sense to minify and mangle your code with the <code>UglifyJsPlugin</code> while in development. These tools should typically be excluded in development:</p>
 <ul>
 <li><code>UglifyJsPlugin</code></li>
 <li><code>ExtractTextPlugin</code></li>
@@ -182,7 +182,7 @@
         <span class="text">Minimal Entry Chunk</span>
         <a aria-label="Minimal Entry Chunk" class="icon-link" href="#minimal-entry-chunk"></a>
       </h3>
-<p>webpack only emits updated chunks to the filesystem. For some configuration options (HMR, <code>[name]</code>/<code>[chunkhash]</code> in <code>output.chunkFilename</code>, <code>[hash]</code>) the entry chunk is invalidated in addition to the changed chunks.</p>
+<p>webpack only emits updated chunks to the filesystem. For some configuration options, (HMR, <code>[name]</code>/<code>[chunkhash]</code> in <code>output.chunkFilename</code>, <code>[hash]</code>) the entry chunk is invalidated in addition to the changed chunks.</p>
 <p>Make sure the entry chunk is cheap to emit by keeping it small. The following code block extracts a chunk containing only the runtime with <em>all other chunks as children</em>:</p>
 <pre><code class="lang-js"><span class="token keyword">new</span> <span class="token class-name">CommonsChunkPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   name<span class="token punctuation">:</span> <span class="token string">&apos;manifest&apos;</span><span class="token punctuation">,</span>
@@ -222,13 +222,13 @@
         <span class="text">Node.js Version</span>
         <a aria-label="Node.js Version" class="icon-link" href="#node-js-version"></a>
       </h3>
-<p>There has been a <a href="https://github.com/nodejs/node/issues/19769">performance regression</a> in the latest stable versions of Node.js and its ES2015 <code>Map</code> and <code>Set</code> implementations. A fix has been merged in master, but a release has yet to be made. In the meantime, to get the most out of incremental build speeds, try to stick with version 8.9.x (problem exists between 8.9.10 - 9.11.1). webpack has moved to using those ES2015 data structures liberally, and it will improve the initial build times as well.</p>
+<p>There has been a <a href="https://github.com/nodejs/node/issues/19769">performance regression</a> in the latest stable versions of Node.js and its ES2015 <code>Map</code> and <code>Set</code> implementations. A fix has been merged into master, but a release has yet to be made. In the meantime, to get the most out of incremental build speeds, try to stick with version 8.9.x (the problem exists between 8.9.10 - 9.11.1). webpack has moved to using those ES2015 data structures liberally, and it will improve the initial build times as well.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#typescript-loader" id="typescript-loader"></a>
         <span class="text">TypeScript Loader</span>
         <a aria-label="TypeScript Loader" class="icon-link" href="#typescript-loader"></a>
       </h3>
-<p>Recently, <code>ts-loader</code> has started to consume the internal TypeScript watch mode APIs which dramatically decreases the number of modules to be rebuilt on each iteration. This <code>experimentalWatchApi</code> shares the same logic as the normal TypeScript watch mode itself and is quite stable for development use. Turn on <code>transpileOnly</code> as well for truly fast incremental builds.</p>
+<p>Recently, <code>ts-loader</code> has started to consume the internal TypeScript watch mode APIs which dramatically decreases the number of modules to be rebuilt on each iteration. This <code>experimentalWatchApi</code> shares the same logic as the normal TypeScript watch mode itself and is quite stable for development use. Turn on <code>transpileOnly</code>, as well, for even faster incremental builds.</p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">// ...</span>
   test<span class="token punctuation">:</span> <span class="token regex">/\.tsx?$/</span><span class="token punctuation">,</span>
@@ -245,7 +245,7 @@
 </code></pre>
 <p>Note: the <code>ts-loader</code> documentation suggests the use of <code>cache-loader</code>, but this actually slows the incremental builds down with disk writes.</p>
 <p>To gain typechecking again, use the <a href="https://www.npmjs.com/package/fork-ts-checker-webpack-plugin"><code>ForkTsCheckerWebpackPlugin</code></a>.</p>
-<p>There is a <a href="https://github.com/TypeStrong/ts-loader/tree/master/examples/fast-incremental-builds">full example</a> on the ts-loader github repository</p>
+<p>There is a <a href="https://github.com/TypeStrong/ts-loader/tree/master/examples/fast-incremental-builds">full example</a> on the ts-loader github repository.</p>
 <hr>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#production" id="production"></a>
@@ -253,14 +253,14 @@
         <a aria-label="Production" class="icon-link" href="#production"></a>
       </h2>
 <p>The following steps are especially useful in <em>production</em>.</p>
-<blockquote class="warning"><div class="tip-content"> <strong>Don&apos;t sacrifice the quality of your application for small performance gains!</strong> Keep in mind that optimization quality is in most cases more important than build performance. </div></blockquote><h3 class="header">
+<blockquote class="warning"><div class="tip-content"> <strong>Don&apos;t sacrifice the quality of your application for small performance gains!</strong> Keep in mind that optimization quality is, in most cases, more important than build performance. </div></blockquote><h3 class="header">
         <a class="anchor" aria-hidden="true" href="#multiple-compilations" id="multiple-compilations"></a>
         <span class="text">Multiple Compilations</span>
         <a aria-label="Multiple Compilations" class="icon-link" href="#multiple-compilations"></a>
       </h3>
-<p>When using multiple compilations the following tools can help:</p>
+<p>When using multiple compilations, the following tools can help:</p>
 <ul>
-<li><a href="https://github.com/trivago/parallel-webpack"><code>parallel-webpack</code></a>: It allows to do compilation in a worker pool.</li>
+<li><a href="https://github.com/trivago/parallel-webpack"><code>parallel-webpack</code></a>: It allows for compilation in a worker pool.</li>
 <li><code>cache-loader</code>: The cache can be shared between multiple compilations.</li>
 </ul>
 <h3 class="header">
@@ -275,7 +275,7 @@
         <span class="text">Specific Tooling Issues</span>
         <a aria-label="Specific Tooling Issues" class="icon-link" href="#specific-tooling-issues"></a>
       </h2>
-<p>The following tools have certain problems that can degrade build performance.</p>
+<p>The following tools have certain problems that can degrade build performance:</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#babel" id="babel"></a>
         <span class="text">Babel</span>
@@ -290,8 +290,8 @@
         <a aria-label="TypeScript" class="icon-link" href="#typescript"></a>
       </h3>
 <ul>
-<li>Use the <code>fork-ts-checker-webpack-plugin</code> for type checking in a separate process.</li>
-<li>Configure loaders to skip type checking.</li>
+<li>Use the <code>fork-ts-checker-webpack-plugin</code> for typechecking in a separate process.</li>
+<li>Configure loaders to skip typechecking.</li>
 <li>Use the <code>ts-loader</code> in <code>happyPackMode: true</code> / <code>transpileOnly: true</code>.</li>
 </ul>
 <h3 class="header">

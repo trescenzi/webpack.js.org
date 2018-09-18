@@ -67,13 +67,13 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/compilation-hooks/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/compiler-hooks/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
@@ -277,10 +277,10 @@
         <loc>https://webpack.js.org/guides/environment-variables/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/getting-started/index.html</loc>
+        <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
+        <loc>https://webpack.js.org/guides/getting-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/installation/index.html</loc>
@@ -451,10 +451,10 @@
         <loc>https://webpack.js.org/migrate/4/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin/index.html</loc>
