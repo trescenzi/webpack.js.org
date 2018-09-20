@@ -478,10 +478,10 @@
         <loc>https://webpack.js.org/plugins/copy-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/define-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/dll-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/dll-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/define-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/environment-plugin/index.html</loc>
