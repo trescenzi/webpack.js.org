@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/fda50e74359390220a5b.css" rel="stylesheet">
+      <link href="/5acef3b79a5ceafce0f1.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -45,7 +45,7 @@
 <pre><code class="lang-javascript">module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
-      test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.m?js$/</span><span class="token punctuation">,</span>
       exclude<span class="token punctuation">:</span> <span class="token regex">/(node_modules|bower_components)/</span><span class="token punctuation">,</span>
       use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         loader<span class="token punctuation">:</span> <span class="token string">&apos;babel-loader&apos;</span><span class="token punctuation">,</span>
@@ -58,12 +58,12 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p>##</p>
-<p>See the <code>babel</code> <a href="https://babeljs.io/docs/usage/api/#options">options</a>.</p>
+<p>See the <code>babel</code> <a href="https://babeljs.io/docs/en/options">options</a>.</p>
 <p>You can pass options to the loader by using the <a href="https://webpack.js.org/configuration/module/#rule-options-rule-query"><code>options</code></a> property:</p>
 <pre><code class="lang-javascript">module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
-      test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.m?js$/</span><span class="token punctuation">,</span>
       exclude<span class="token punctuation">:</span> <span class="token regex">/(node_modules|bower_components)/</span><span class="token punctuation">,</span>
       use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         loader<span class="token punctuation">:</span> <span class="token string">&apos;babel-loader&apos;</span><span class="token punctuation">,</span>
@@ -96,7 +96,7 @@
         <span class="text">babel-loader is slow!</span>
         <a aria-label="babel-loader is slow!" class="icon-link" href="#babel-loader-is-slow-"></a>
       </h3>
-<p>Make sure you are transforming as few files as possible. Because you are probably matching <code>/\.js$/</code>, you might be transforming the <code>node_modules</code> folder or other unwanted source.</p>
+<p>Make sure you are transforming as few files as possible. Because you are probably matching <code>/\.m?js$/</code>, you might be transforming the <code>node_modules</code> folder or other unwanted source.</p>
 <p>To exclude <code>node_modules</code>, see the <code>exclude</code> option in the <code>loaders</code> config as documented above.</p>
 <p>You can also speed up babel-loader by as much as 2x by using the <code>cacheDirectory</code> option. This will cache transformations to the filesystem.</p>
 <h3 class="header">
@@ -113,7 +113,7 @@
   <span class="token comment">// the &apos;transform-runtime&apos; plugin tells Babel to</span>
   <span class="token comment">// require the runtime instead of inlining it.</span>
   <span class="token punctuation">{</span>
-    test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+    test<span class="token punctuation">:</span> <span class="token regex">/\.m?js$/</span><span class="token punctuation">,</span>
     exclude<span class="token punctuation">:</span> <span class="token regex">/(node_modules|bower_components)/</span><span class="token punctuation">,</span>
     use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
       loader<span class="token punctuation">:</span> <span class="token string">&apos;babel-loader&apos;</span><span class="token punctuation">,</span>
@@ -168,7 +168,7 @@
       </h3>
 <p>If you receive this message, it means that you have the npm package <code>babel</code> installed and are using the short notation of the loader in the webpack config (which is not valid anymore as of webpack 2.x):</p>
 <pre><code class="lang-javascript">  <span class="token punctuation">{</span>
-    test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+    test<span class="token punctuation">:</span> <span class="token regex">/\.m?js$/</span><span class="token punctuation">,</span>
     loader<span class="token punctuation">:</span> <span class="token string">&apos;babel&apos;</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
 </code></pre>
@@ -176,7 +176,7 @@
 <p>To fix this, you should uninstall the npm package <code>babel</code>, as it is deprecated in Babel v6. (Instead, install <code>babel-cli</code> or <code>babel-core</code>.)
 In the case one of your dependencies is installing <code>babel</code> and you cannot uninstall it yourself, use the complete name of the loader in the webpack config:</p>
 <pre><code class="lang-javascript">  <span class="token punctuation">{</span>
-    test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+    test<span class="token punctuation">:</span> <span class="token regex">/\.m?js$/</span><span class="token punctuation">,</span>
     loader<span class="token punctuation">:</span> <span class="token string">&apos;babel-loader&apos;</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
 </code></pre>
