@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/fabe98567432ee2c378f.css" rel="stylesheet">
+      <link href="/ce5509e5fd2ad4a8edbb.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -243,7 +243,7 @@ manifest.1400d5af64fc1b7b3a45.js    5.85 kB       2  <span class="token punctuat
 <p>The first and last are expected -- it&apos;s the <code>vendor</code> hash we want to fix. Luckily, there are two plugins we can use to resolve this issue. The first is the <code>NamedModulesPlugin</code>, which will use the path to the module rather than a numerical identifier. While this plugin is useful during development for more readable output, it does take a bit longer to run. The second option is the <a href="/plugins/hashed-module-ids-plugin"><code>HashedModuleIdsPlugin</code></a>, which is recommended for production builds:</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
-  const webpack = require(&apos;webpack&apos;);
+<span class="token inserted">+ const webpack = require(&apos;webpack&apos;);</span>
   const CleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;);
   const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);
 
