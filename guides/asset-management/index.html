@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/9d2410b2c34103ac32f5.css" rel="stylesheet">
+      <link href="/980ee266e6a6890a7cc8.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -107,20 +107,19 @@
 <p>Now run your build command:</p>
 <pre><code class="lang-bash">npm run build
 
-Hash: 9a3abfc96300ef87880f
-Version: webpack 2.6.1
-Time: 834ms
-    Asset    Size  Chunks                    Chunk Names
-bundle.js  560 kB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  <span class="token punctuation">[</span>big<span class="token punctuation">]</span>  main
-   <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./~/lodash/lodash.js 540 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/style.css 1 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>2<span class="token punctuation">]</span> ./~/css-loader<span class="token operator">!</span>./src/style.css 191 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>3<span class="token punctuation">]</span> ./~/css-loader/lib/css-base.js 2.26 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>4<span class="token punctuation">]</span> ./~/style-loader/lib/addStyles.js 8.7 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>5<span class="token punctuation">]</span> ./~/style-loader/lib/urls.js 3.01 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>6<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 509 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>7<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 517 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>8<span class="token punctuation">]</span> ./src/index.js 351 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+Hash: 43e22662004ea1cc5709
+Version: webpack 4.19.0
+Time: 6051ms
+Built at: 2018-09-15 11:12:13
+    Asset      Size  Chunks             Chunk Names
+bundle.js  76.4 KiB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  main
+Entrypoint main <span class="token operator">=</span> bundle.js
+<span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/index.js 368 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 509 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 519 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>4<span class="token punctuation">]</span> ./src/style.css 1.05 KiB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>5<span class="token punctuation">]</span> ./node_modules/css-loader<span class="token operator">!</span>./src/style.css 190 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    + 4 hidden modules
 </code></pre>
 <p>Open up <code>index.html</code> in your browser again and you should see that <code>Hello webpack</code> is now styled in red. To see what webpack did, inspect the page (don&apos;t view the page source, as it won&apos;t show you the result) and look at the page&apos;s head tags. It should contain our style block that we imported in <code>index.js</code>.</p>
 <p>Note that you can, and in most cases should, <a href="/plugins/mini-css-extract-plugin/#minimizing-for-production">minimize css</a> for better load times in production. On top of that, loaders exist for pretty much any flavor of CSS you can think of -- <a href="/loaders/postcss-loader">postcss</a>, <a href="/loaders/sass-loader">sass</a>, and <a href="/loaders/less-loader">less</a> to name a few.</p>
@@ -207,22 +206,21 @@ bundle.js  560 kB       0  <span class="token punctuation">[</span>emitted<span 
 <p>Let&apos;s create a new build and open up the index.html file again:</p>
 <pre><code class="lang-bash">npm run build
 
-Hash: 854865050ea3c1c7f237
-Version: webpack 2.6.1
-Time: 895ms
-                               Asset     Size  Chunks                    Chunk Names
-5c999da72346a995e7e2718865d019c8.png  11.3 kB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
-                           bundle.js   561 kB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  <span class="token punctuation">[</span>big<span class="token punctuation">]</span>  main
-   <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/icon.png 82 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./~/lodash/lodash.js 540 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>2<span class="token punctuation">]</span> ./src/style.css 1 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>3<span class="token punctuation">]</span> ./~/css-loader<span class="token operator">!</span>./src/style.css 242 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>4<span class="token punctuation">]</span> ./~/css-loader/lib/css-base.js 2.26 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>5<span class="token punctuation">]</span> ./~/style-loader/lib/addStyles.js 8.7 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>6<span class="token punctuation">]</span> ./~/style-loader/lib/urls.js 3.01 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>7<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 509 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>8<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 517 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>9<span class="token punctuation">]</span> ./src/index.js 503 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+Hash: 0993aeea2fd6ea0a7b22
+Version: webpack 4.19.0
+Time: 836ms
+Built at: 2018-09-15 12:58:57
+                               Asset      Size  Chunks                    Chunk Names
+da4574bb234ddc4bb47cbe1ca4b20303.png  3.01 MiB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  <span class="token punctuation">[</span>big<span class="token punctuation">]</span>
+                           bundle.js  76.7 KiB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>         main
+Entrypoint main <span class="token operator">=</span> bundle.js
+<span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/index.js 368 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 509 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 519 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>4<span class="token punctuation">]</span> ./src/style.css 1.05 KiB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>5<span class="token punctuation">]</span> ./node_modules/css-loader<span class="token operator">!</span>./src/style.css 337 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>8<span class="token punctuation">]</span> ./src/icon.png 82 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    + 5 hidden modules
 </code></pre>
 <p>If all went well, you should now see your icon as a repeating background, as well as an <code>img</code> element beside our <code>Hello webpack</code> text. If you inspect this element, you&apos;ll see that the actual filename has changed to something like <code>5c999da72346a995e7e2718865d019c8.png</code>. This means webpack found our file in the <code>src</code> folder and processed it!</p>
 <blockquote class="tip"><div class="tip-content"> A logical next step from here is minifying and optimizing your images. Check out the <a href="https://github.com/tcoopman/image-webpack-loader">image-webpack-loader</a> and <a href="/loaders/url-loader">url-loader</a> for more on how you can enhance your image loading process. </div></blockquote><h2 class="header">
@@ -300,24 +298,26 @@ Time: 895ms
 <p>Now run a new build and let&apos;s see if webpack handled our fonts:</p>
 <pre><code class="lang-bash">npm run build
 
-Hash: b4aef94169088c79ed1c
-Version: webpack 2.6.1
-Time: 775ms
-                                Asset     Size  Chunks                    Chunk Names
- 5c999da72346a995e7e2718865d019c8.png  11.3 kB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
-11aebbbd407bcc3ab1e914ca0238d24d.woff   221 kB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
-                            bundle.js   561 kB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  <span class="token punctuation">[</span>big<span class="token punctuation">]</span>  main
-   <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/icon.png 82 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./~/lodash/lodash.js 540 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>2<span class="token punctuation">]</span> ./src/style.css 1 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>3<span class="token punctuation">]</span> ./~/css-loader<span class="token operator">!</span>./src/style.css 420 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>4<span class="token punctuation">]</span> ./~/css-loader/lib/css-base.js 2.26 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>5<span class="token punctuation">]</span> ./src/MyFont.woff 83 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>6<span class="token punctuation">]</span> ./~/style-loader/lib/addStyles.js 8.7 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>7<span class="token punctuation">]</span> ./~/style-loader/lib/urls.js 3.01 kB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>8<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 509 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-   <span class="token punctuation">[</span>9<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 517 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-  <span class="token punctuation">[</span>10<span class="token punctuation">]</span> ./src/index.js 503 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+Hash: e4c67b7eebe94142a38e
+Version: webpack 4.19.0
+Time: 879ms
+Built at: 2018-09-15 13:14:08
+                                 Asset      Size  Chunks                    Chunk Names
+5439466351d432b73fdb518c6ae9654a.woff2  19.5 KiB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
+ 387c65cc923ad19790469cfb5b7cb583.woff  23.4 KiB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
+  da4574bb234ddc4bb47cbe1ca4b20303.png  3.01 MiB          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  <span class="token punctuation">[</span>big<span class="token punctuation">]</span>
+                             bundle.js    77 KiB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>         main
+Entrypoint main <span class="token operator">=</span> bundle.js
+ <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/index.js 368 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+ <span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 509 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+ <span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 519 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+ <span class="token punctuation">[</span>4<span class="token punctuation">]</span> ./src/style.css 1.05 KiB <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+ <span class="token punctuation">[</span>5<span class="token punctuation">]</span> ./node_modules/css-loader<span class="token operator">!</span>./src/style.css 611 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+ <span class="token punctuation">[</span>8<span class="token punctuation">]</span> ./src/my-font.woff2 84 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+ <span class="token punctuation">[</span>9<span class="token punctuation">]</span> ./src/my-font.woff 83 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+<span class="token punctuation">[</span>10<span class="token punctuation">]</span> ./src/icon.png 82 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    + 5 hidden modules
+
 </code></pre>
 <p>Open up <code>index.html</code> again and see if our <code>Hello webpack</code> text has changed to the new font. If all is well, you should see the changes.</p>
 <h2 class="header">

@@ -82,13 +82,13 @@
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/module-methods/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/module-variables/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/node/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/module-methods/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/parser/index.html</loc>
@@ -151,10 +151,10 @@
         <loc>https://webpack.js.org/configuration/configuration-types/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/devtool/index.html</loc>
+        <loc>https://webpack.js.org/configuration/dev-server/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/dev-server/index.html</loc>
+        <loc>https://webpack.js.org/configuration/devtool/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/entry-context/index.html</loc>
@@ -454,9 +454,6 @@
         <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin/index.html</loc>
     </url>
     <url>
@@ -572,6 +569,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
