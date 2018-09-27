@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/ee48a67e25a03a1c4591.css" rel="stylesheet">
+      <link href="/b339abbc8f657a7ad70d.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -83,6 +83,8 @@
 <li><p><code>cacheIdentifier</code>: Default is a string composed by the <code>babel-core</code>&apos;s version, the <code>babel-loader</code>&apos;s version, the contents of <code>.babelrc</code> file if it exists, and the value of the environment variable <code>BABEL_ENV</code> with a fallback to the <code>NODE_ENV</code> environment variable. This can be set to a custom value to force cache busting if the identifier changes.</p>
 </li>
 <li><p><code>cacheCompression</code>: Default <code>true</code>. When set, each Babel transform output will be compressed with Gzip. If you want to opt-out of cache compression, set it to <code>false</code> -- your project may benefit from this if it transpiles thousands of files.</p>
+</li>
+<li><p><code>customize</code>: Default <code>null</code>. The path of a module that exports a <code>custom</code> callback <a href="#customized-loader">like the one that you&apos;d pass to <code>.custom()</code></a>. Since you already have to make a new file to use this, it is recommended that you instead use <code>.custom</code> to create a wrapper loader. Only use this is you <em>must</em> continue using <code>babel-loader</code> directly, but still want to customize.</p>
 </li>
 </ul>
 <p><strong>Note</strong>: The <code>sourceMap</code> option is ignored. Instead, source maps are automatically enabled when webpack is configured to use them (via the <a href="https://webpack.js.org/configuration/devtool/#devtool"><code>devtool</code></a> config option).</p>
@@ -190,12 +192,16 @@ of Babel&apos;s configuration for each file that it processes.</p>
 <p><code>.custom</code> accepts a callback that will be called with the loader&apos;s instance of
 <code>babel</code> so that tooling can ensure that it using exactly the same <code>@babel/core</code>
 instance as the loader itself.</p>
+<p>In cases where you want to customize without actually having a file to call <code>.custom</code>, you
+may also pass the <code>customize</code> option with a string pointing at a file that exports
+your <code>custom</code> callback function.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#example" id="example"></a>
         <span class="text">Example</span>
         <a aria-label="Example" class="icon-link" href="#example"></a>
       </h3>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">custom</span><span class="token punctuation">(</span>babel <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+<pre><code class="lang-js"><span class="token comment">// Export from &quot;./my-custom-loader.js&quot; or whatever you want.</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">custom</span><span class="token punctuation">(</span>babel <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">myPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
       visitor<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -214,7 +220,7 @@ instance as the loader itself.</p>
       <span class="token punctuation">}</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    <span class="token comment">// Passed Babel&apos;s &apos;PartialConfig&apos; object. </span>
+    <span class="token comment">// Passed Babel&apos;s &apos;PartialConfig&apos; object.</span>
     <span class="token function">config</span><span class="token punctuation">(</span>cfg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span>cfg<span class="token punctuation">.</span><span class="token function">hasFilesystemConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// Use the normal config</span>
@@ -240,6 +246,18 @@ instance as the loader itself.</p>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="token comment">// And in your Webpack config</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ..</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      <span class="token comment">// ...</span>
+      loader<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;my-custom-loader.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#customoptions-options-object-custom-object-loader-object-" id="customoptions-options-object-custom-object-loader-object-"></a>
