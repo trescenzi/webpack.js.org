@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/81180ca121daaeb5ceba.css" rel="stylesheet">
+      <link href="/e71d442e0a1df0f4e121.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -270,13 +270,21 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <pre><code class="lang-js">require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span>
   directory<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
   includeSubdirs<span class="token punctuation">:</span> Boolean <span class="token comment">/* optional, default true */</span><span class="token punctuation">,</span>
-  filter<span class="token punctuation">:</span> RegExp <span class="token comment">/* optional */</span>
+  filter<span class="token punctuation">:</span> RegExp <span class="token comment">/* optional, default /^\.\/.*$/, any file */</span><span class="token punctuation">,</span>
+  mode<span class="token punctuation">:</span> String  <span class="token comment">/* optional, &apos;sync&apos; | &apos;eager&apos; | &apos;weak&apos; | &apos;lazy&apos; | &apos;lazy-once&apos;, default &apos;sync&apos; */</span>
 <span class="token punctuation">)</span>
 </code></pre>
-<p>Specify a whole group of dependencies using a path to the <code>directory</code>, an option to <code>includeSubdirs</code>, and a <code>filter</code> for more fine grained control of the modules included. These can then be easily resolved later on:</p>
+<p>Specify a whole group of dependencies using a path to the <code>directory</code>, an option to <code>includeSubdirs</code>, a <code>filter</code> for more fine grained control of the modules included, and a <code>mode</code> to define the way how loading will work. Underlying modules can then be easily resolved later on:</p>
 <pre><code class="lang-javascript"><span class="token keyword">var</span> context <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">&apos;components&apos;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex">/\.html$/</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> componentA <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;componentA&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<p>If <code>mode</code> is specified as &quot;lazy&quot;, the underlying modules will be loaded asynchronously:</p>
+<pre><code class="lang-javascript"><span class="token keyword">var</span> context <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">&apos;locales&apos;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex">/\.json$/</span><span class="token punctuation">,</span> <span class="token string">&apos;lazy&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">context</span><span class="token punctuation">(</span><span class="token string">&apos;localeA&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>locale <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// do something with locale</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The full list of available modes and its behavior is described in <a href="#import-"><code>import()</code></a> documentation.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#require-include" id="require-include"></a>
         <span class="text"><code>require.include</code></span>
