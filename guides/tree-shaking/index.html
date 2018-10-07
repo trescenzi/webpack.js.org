@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/f7187d2e224d0e63df72.css" rel="stylesheet">
+      <link href="/846c65a48aa31c27d3ee.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -159,6 +159,7 @@ module.exports = {
 <p>So, what we&apos;ve learned is that in order to take advantage of <em>tree shaking</em>, you must...</p>
 <ul>
 <li>Use ES2015 module syntax (i.e. <code>import</code> and <code>export</code>).</li>
+<li>Ensure no compilers transform your ES2015 module syntax into CommonJS modules (this is the default behavior of popular Babel preset @babel/preset-env - see <a href="https://babeljs.io/docs/en/babel-preset-env#modules">documentation</a> for more details).</li>
 <li>Add a <code>&quot;sideEffects&quot;</code> property to your project&apos;s <code>package.json</code> file.</li>
 <li>Use <a href="/concepts/mode/#mode-production"><code>production</code></a> <code>mode</code> configuration option to enable <a href="/concepts/mode/#usage">various optimizations</a> including minification and tree shaking.</li>
 </ul>
