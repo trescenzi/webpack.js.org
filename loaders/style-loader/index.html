@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/846c65a48aa31c27d3ee.css" rel="stylesheet">
+      <link href="/d39e903dee0a62a38768.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -83,7 +83,7 @@ style<span class="token punctuation">.</span>className <span class="token operat
 <pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>path/to/file.css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <blockquote>
-<p>:information_source: Source maps and assets referenced with <code>url</code>: when style loader is used with <code>{ options: { sourceMap: true } }</code> option, the CSS modules will be generated as <code>Blob</code>s, so relative paths don&apos;t work (they would be relative to <code>chrome:blob</code> or <code>chrome:devtools</code>). In order for assets to maintain correct paths setting <code>output.publicPath</code> property of webpack configuration must be set, so that absolute paths are generated. Alternatively you can enable the <code>convertToAbsoluteUrls</code> option mentioned above.</p>
+<p>&#x2139;&#xFE0F; Source maps and assets referenced with <code>url</code>: when style loader is used with <code>{ options: { sourceMap: true } }</code> option, the CSS modules will be generated as <code>Blob</code>s, so relative paths don&apos;t work (they would be relative to <code>chrome:blob</code> or <code>chrome:devtools</code>). In order for assets to maintain correct paths setting <code>output.publicPath</code> property of webpack configuration must be set, so that absolute paths are generated. Alternatively you can enable the <code>convertToAbsoluteUrls</code> option mentioned above.</p>
 </blockquote>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#useable" id="useable"></a>
@@ -128,7 +128,9 @@ style<span class="token punctuation">.</span><span class="token function">use</s
 style<span class="token punctuation">.</span><span class="token function">unuse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// = style.unref();</span>
 </code></pre>
 <p>Styles are not added on <code>import/require()</code>, but instead on call to <code>use</code>/<code>ref</code>. Styles are removed from page if <code>unuse</code>/<code>unref</code> is called exactly as often as <code>use</code>/<code>ref</code>.</p>
-<p>:warning: Behavior is undefined when <code>unuse</code>/<code>unref</code> is called more often than <code>use</code>/<code>ref</code>. Don&apos;t do that.</p>
+<blockquote>
+<p>&#x26A0;&#xFE0F;  Behavior is undefined when <code>unuse</code>/<code>unref</code> is called more often than <code>use</code>/<code>ref</code>. Don&apos;t do that.</p>
+</blockquote>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#options" id="options"></a>
         <span class="text">Options</span>
@@ -488,6 +490,9 @@ This could be used for non local development and production.</p>
 <p>A <code>transform</code> is a function that can modify the css just before it is loaded into the page by the style-loader.
 This function will be called on the css that is about to be loaded and the return value of the function will be loaded into the page instead of the original css.
 If the return value of the <code>transform</code> function is falsy, the css will not be loaded into the page at all.</p>
+<blockquote>
+<p>&#x26A0;&#xFE0F; In case you are using ES Module syntax in <code>tranform.js</code> then, you <strong>need to transpile</strong> it or otherwise it will throw an <code>{Error}</code>.</p>
+</blockquote>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js"><span class="token punctuation">{</span>
   loader<span class="token punctuation">:</span> <span class="token string">&apos;style-loader&apos;</span><span class="token punctuation">,</span>

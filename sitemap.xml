@@ -10,6 +10,9 @@
         <loc>https://webpack.js.org/branding/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/comparison/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/concepts/index.html</loc>
     </url>
     <url>
@@ -17,9 +20,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/comparison/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/index.html</loc>
@@ -148,9 +148,6 @@
         <loc>https://webpack.js.org/configuration/configuration-languages/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/configuration-types/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/configuration/dev-server/index.html</loc>
     </url>
     <url>
@@ -163,13 +160,16 @@
         <loc>https://webpack.js.org/configuration/externals/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/configuration/configuration-types/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/configuration/module/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/node/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/optimization/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/configuration/module/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/other-options/index.html</loc>
@@ -311,9 +311,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/tree-shaking/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/typescript/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
@@ -572,6 +569,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/typescript/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
