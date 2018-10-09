@@ -10,10 +10,10 @@
         <loc>https://webpack.js.org/branding/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/comparison/index.html</loc>
+        <loc>https://webpack.js.org/concepts/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/index.html</loc>
+        <loc>https://webpack.js.org/comparison/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/index.html</loc>
@@ -34,13 +34,13 @@
         <loc>https://webpack.js.org/guides/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/license/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/migrate/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/license/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/migrating/index.html</loc>
@@ -142,6 +142,9 @@
         <loc>https://webpack.js.org/concepts/targets/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/concepts/why-webpack/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/configuration-languages/index.html</loc>
     </url>
     <url>
@@ -151,16 +154,13 @@
         <loc>https://webpack.js.org/configuration/dev-server/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/devtool/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/configuration/entry-context/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/why-webpack/index.html</loc>
+        <loc>https://webpack.js.org/configuration/devtool/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/module/index.html</loc>
@@ -580,9 +580,6 @@
         <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/plugins/parser/index.html</loc>
     </url>
     <url>
@@ -593,5 +590,8 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/template/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
     </url>
 </urlset>
