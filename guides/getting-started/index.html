@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/3cd94f3335ba003ae700.css" rel="stylesheet">
+      <link href="/d355e33b6a1a2e825f82.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -141,16 +141,11 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <p>With that said, let&apos;s run <code>npx webpack</code>, which will take our script at <code>src/index.js</code> as the <a href="/concepts/entry-points">entry point</a>, and will generate <code>dist/main.js</code> as the <a href="/concepts/output">output</a>. The <code>npx</code> command, which ships with Node 8.2/npm 5.2.0 or higher, runs the webpack binary (<code>./node_modules/.bin/webpack</code>) of the webpack package we installed in the beginning:</p>
 <pre><code class="lang-bash">npx webpack
 
-Hash: dabab1bac2b940c1462b
-Version: webpack 4.12.0
-Time: 287ms
+<span class="token punctuation">..</span>.
 Built at: 13/06/2018 11:52:07
   Asset      Size  Chunks             Chunk Names
 main.js  70.4 KiB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  main
-<span class="token punctuation">[</span>1<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 497 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 489 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-<span class="token punctuation">[</span>3<span class="token punctuation">]</span> ./src/index.js 216 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-    + 1 hidden module
+<span class="token punctuation">..</span>.
 
 WARNING <span class="token keyword">in</span> configuration
 The <span class="token string">&apos;mode&apos;</span> option has not been set, webpack will fallback to <span class="token string">&apos;production&apos;</span> <span class="token keyword">for</span> this value. Set <span class="token string">&apos;mode&apos;</span> option to <span class="token string">&apos;development&apos;</span> or <span class="token string">&apos;production&apos;</span> to <span class="token function">enable</span> defaults <span class="token keyword">for</span> each environment.
@@ -194,16 +189,10 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>Now, let&apos;s run the build again but instead using our new configuration file:</p>
 <pre><code class="lang-bash">npx webpack --config webpack.config.js
 
-Hash: dabab1bac2b940c1462b
-Version: webpack 4.12.0
-Time: 283ms
-Built at: 13/06/2018 11:53:51
+<span class="token punctuation">..</span>.
   Asset      Size  Chunks             Chunk Names
 main.js  70.4 KiB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  main
-<span class="token punctuation">[</span>1<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 497 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 489 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-<span class="token punctuation">[</span>3<span class="token punctuation">]</span> ./src/index.js 216 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-    + 1 hidden module
+<span class="token punctuation">..</span>.
 
 WARNING <span class="token keyword">in</span> configuration
 The <span class="token string">&apos;mode&apos;</span> option has not been set, webpack will fallback to <span class="token string">&apos;production&apos;</span> <span class="token keyword">for</span> this value. Set <span class="token string">&apos;mode&apos;</span> option to <span class="token string">&apos;development&apos;</span> or <span class="token string">&apos;production&apos;</span> to <span class="token function">enable</span> defaults <span class="token keyword">for</span> each environment.
@@ -241,16 +230,10 @@ You can also <span class="token keyword">set</span> it to <span class="token str
 <p>Now run the following command and see if your script alias works:</p>
 <pre><code class="lang-bash">npm run build
 
-Hash: dabab1bac2b940c1462b
-Version: webpack 4.12.0
-Time: 278ms
-Built at: 13/06/2018 11:54:54
+<span class="token punctuation">..</span>.
   Asset      Size  Chunks             Chunk Names
 main.js  70.4 KiB       0  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  main
-<span class="token punctuation">[</span>1<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 497 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js 489 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-<span class="token punctuation">[</span>3<span class="token punctuation">]</span> ./src/index.js 216 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
-    + 1 hidden module
+<span class="token punctuation">..</span>.
 
 WARNING <span class="token keyword">in</span> configuration
 The <span class="token string">&apos;mode&apos;</span> option has not been set, webpack will fallback to <span class="token string">&apos;production&apos;</span> <span class="token keyword">for</span> this value. Set <span class="token string">&apos;mode&apos;</span> option to <span class="token string">&apos;development&apos;</span> or <span class="token string">&apos;production&apos;</span> to <span class="token function">enable</span> defaults <span class="token keyword">for</span> each environment.
