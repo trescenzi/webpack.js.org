@@ -10,6 +10,9 @@
         <loc>https://webpack.js.org/branding/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/comparison/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/concepts/index.html</loc>
     </url>
     <url>
@@ -17,9 +20,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/comparison/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/index.html</loc>
@@ -127,6 +127,9 @@
         <loc>https://webpack.js.org/concepts/mode/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/concepts/module-resolution/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/concepts/modules/index.html</loc>
     </url>
     <url>
@@ -158,9 +161,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/concepts/module-resolution/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/module/index.html</loc>
@@ -394,9 +394,6 @@
         <loc>https://webpack.js.org/loaders/node-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/null-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/polymer-webpack-loader/index.html</loc>
     </url>
     <url>
@@ -404,6 +401,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/raw-loader/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/null-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/react-proxy-loader/index.html</loc>
