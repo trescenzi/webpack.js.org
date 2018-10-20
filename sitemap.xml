@@ -94,6 +94,9 @@
         <loc>https://webpack.js.org/api/parser/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/passing-a-config/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/plugins/index.html</loc>
     </url>
     <url>
@@ -101,9 +104,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/stats/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/passing-a-config/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
