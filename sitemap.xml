@@ -364,6 +364,9 @@
         <loc>https://webpack.js.org/loaders/html-loader/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders/i18n-loader/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/imports-loader/index.html</loc>
     </url>
     <url>
@@ -569,9 +572,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/loaders/i18n-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
